@@ -37,6 +37,7 @@ def main():
         a.set_xlabel("cdp")
         a.set_ylabel("Time (s)")
     fig.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "sparse_decon_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

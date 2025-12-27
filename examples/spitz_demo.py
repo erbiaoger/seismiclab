@@ -55,6 +55,8 @@ def main():
         a.set_xlabel("Offset [m]")
         a.set_ylabel("Time [s]")
     fig2.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "spitz_demo_wiggle.png", dpi=150, bbox_inches="tight")
+    fig2.savefig(Path(__file__).parent / "figs" / "spitz_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

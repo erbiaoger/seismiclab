@@ -63,6 +63,8 @@ def main():
     plt.sca(plt.gca())  # 选择当前坐标轴
     wigb(np.hstack([d0[:, 4, :], dn[:, 4, :], dr[:, 4, :]]))  # 并排wiggle
     plt.title("Clean - Decimated - Restored (inline 5)")  # 标题
+    fig.savefig(Path(__file__).parent / "figs" / "pocs_demo.png", dpi=150, bbox_inches="tight")
+    fig2.savefig(Path(__file__).parent / "figs" / "pocs_demo_wiggle.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

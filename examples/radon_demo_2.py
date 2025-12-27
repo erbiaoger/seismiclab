@@ -60,6 +60,8 @@ def main():
     ax2[1].set_xlabel("Residual moveout [s]")  # x轴
     ax2[1].set_title("Moveout spectrum - primaries")  # 标题
     fig2.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "radon_demo_2.png", dpi=150, bbox_inches="tight")
+    fig2.savefig(Path(__file__).parent / "figs" / "radon_demo_2_spectrum.png", dpi=150, bbox_inches="tight")
     plt.show()  # 展示图形
 
 

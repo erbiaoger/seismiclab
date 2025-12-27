@@ -48,6 +48,7 @@ def main():
     print("Demo FX decon")
     print(f"SNR of input   {Q1:6.2f} db")
     print(f"SNR of output  {Q2:6.2f} db")
+    plt.savefig(Path(__file__).parent / "figs" / "fx_decon_demo.png", dpi=150, bbox_inches="tight")
     plt.show()
 
 

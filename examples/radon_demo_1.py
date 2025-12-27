@@ -84,6 +84,8 @@ def main():
     ax2[0].set_xlabel("Offset [m]"); ax2[0].set_ylabel("Time [s]"); ax2[0].set_title("Original")  # 左图标注
     ax2[1].set_xlabel("Offset [m]"); ax2[1].set_title("Primaries after INMO")  # 右图标注
     fig2.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "radon_demo_1.png", dpi=150, bbox_inches="tight")
+    fig2.savefig(Path(__file__).parent / "figs" / "radon_demo_1_comparison.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示全部图形
 
 

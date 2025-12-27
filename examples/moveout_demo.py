@@ -28,8 +28,8 @@ def main():
     d_nmo, _, _, _ = nmo(d, dtsec, h, tnmo, vnmo, max_stretch)  # 执行NMO校正
     d_inmo, _, _, _ = inmo(d_nmo, dtsec, h, tnmo, vnmo, max_stretch)  # 反NMO校正
 
-    write_su("examples", "data", "syn_cmp_nmo_py.su", d_nmo, headers, dt=dtsec)  # 保存NMO结果
-    write_su("examples", "data", "syn_cmp_inmo_py.su", d_inmo, headers, dt=dtsec)  # 保存INMO结果
+    # write_su("examples", "data", "syn_cmp_nmo_py.su", d_nmo, headers, dt=dtsec)  # 保存NMO结果
+    # write_su("examples", "data", "syn_cmp_inmo_py.su", d_inmo, headers, dt=dtsec)  # 保存INMO结果
 
     nt, nx = d.shape  # 数据维度
     taxis = np.arange(nt) * dtsec  # 时间轴
@@ -43,6 +43,7 @@ def main():
     ax[0].set_ylabel("Time [s]")  # y轴
     fig.colorbar(im1, ax=ax[1], shrink=0.7)  # 色条
     fig.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "moveout_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

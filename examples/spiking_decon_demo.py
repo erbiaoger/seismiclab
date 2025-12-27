@@ -91,6 +91,7 @@ def main():
     ax[1].legend()  # 图例
     ax[1].grid()  # 网格
     plt.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "spiking_decon_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

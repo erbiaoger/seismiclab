@@ -39,6 +39,7 @@ def main():
     ax[1].set_title("Velocity analysis")  # 标题
     fig.colorbar(im, ax=ax[1])  # 色条
     fig.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "va_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 

@@ -68,6 +68,8 @@ def main():
     ls_filter, o = ls_inv_filter(filt.flatten(), 40, 20, 0.001)  # 最小二乘逆滤波器
     print("Least-squares inverse filter length:", len(ls_filter))  # 输出长度
 
+    fig.savefig(Path(__file__).parent / "figs" / "med_demo.png", dpi=150, bbox_inches="tight")
+    fig2.savefig(Path(__file__).parent / "figs" / "med_demo_spectrum.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示图形
 
 

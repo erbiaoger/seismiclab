@@ -53,6 +53,7 @@ def main():
     ax[2].set_xlabel("q [s]")  # q轴
     fig.colorbar(im, ax=ax[2])  # 色条
     fig.tight_layout()  # 紧凑布局
+    fig.savefig(Path(__file__).parent / "figs" / "parabolic_moveout_demo.png", dpi=150, bbox_inches="tight")
     plt.show()  # 显示
 
 
